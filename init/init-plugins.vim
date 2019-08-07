@@ -517,6 +517,8 @@ if index(g:bundle_group, 'leaderf') >= 0
 	endif
 endif
 
+	" vim org-mode 
+	Plug 'ycm-core/YouCompleteMe'
 
 "----------------------------------------------------------------------
 " 结束插件安装
