@@ -50,6 +50,8 @@ Plug 'justinmk/vim-dirvish'
 " 表格对齐，使用命令 Tabularize
 Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
 
+Plug 'junegunn/vim-easy-align'
+
 " Diff 增强，支持 histogram / patience 等更科学的 diff 算法
 Plug 'chrisbra/vim-diff-enhanced'
 
@@ -86,6 +88,7 @@ augroup MyPluginSetup
 augroup END
 
 
+xmap <enter> <plug>(LiveEasyAlign)
 "----------------------------------------------------------------------
 " 基础插件
 "----------------------------------------------------------------------
@@ -123,7 +126,7 @@ if index(g:bundle_group, 'basic') >= 0
 	nmap <m-e> <Plug>(choosewin)
 
 	" 默认不显示 startify
-	let g:startify_disable_at_vimenter = 1
+	let g:startify_disable_at_vimenter = 0
 	let g:startify_session_dir = '~/.vim/session'
 
 	" 使用 <space>ha 清除 errormarker 标注的错误
