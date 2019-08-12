@@ -55,6 +55,13 @@ Plug 'junegunn/vim-easy-align'
 " Diff 增强，支持 histogram / patience 等更科学的 diff 算法
 Plug 'chrisbra/vim-diff-enhanced'
 
+" 去掉全部行为空格
+Plug 'bronson/vim-trailing-whitespace'
+
+"----------------------------------------------------------------------
+" vim-trailing-whitespace 设置：去掉全部行为空格
+"----------------------------------------------------------------------
+map <leader><space> :FixWhitespace<cr>
 
 "----------------------------------------------------------------------
 " Dirvish 设置：自动排序并隐藏文件，同时定位到相关文件
@@ -184,6 +191,11 @@ endif
 " 不在 git/svn 内的项目，需要在项目根目录 touch 一个空的 .root 文件
 " 详细用法见：https://zhuanlan.zhihu.com/p/36279445
 "----------------------------------------------------------------------
+" gtags path
+"----------------------------------------------------------------------
+let $GTAGSLABEL = 'native-pygments'
+let $GTAGSCONF = '/usr/local/share/gtags/gtags.conf'
+
 if index(g:bundle_group, 'tags') >= 0
 
 	" 提供 ctags/gtags 后台数据库自动更新功能
